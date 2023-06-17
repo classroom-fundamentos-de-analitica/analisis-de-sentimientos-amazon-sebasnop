@@ -11,6 +11,7 @@ Naive Bayes para determinar el sentimiento de un comentario.
 import numpy as np
 import pandas as pd
 
+ruta = "amazon_cells_labelled.tsv"
 
 def pregunta_01():
     """
@@ -25,7 +26,7 @@ def pregunta_01():
     column_names = ["msg", "lbl"]
 
     df = pd.read_table(
-        "",
+        ruta,
         header = None,
         names = column_names,
     )
