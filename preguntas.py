@@ -124,7 +124,7 @@ def pregunta_04():
         analyzer=analyzer,
         lowercase=True,
         stop_words="english",
-        token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
+        token_pattern=r"\b[a-zA-Z][a-zA-Z]+\b",
         binary=True,
         max_df=1.0,
         min_df=5,
@@ -142,7 +142,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "bernoulliNB": np.linspace(0.1, 1.0, num=10),
+        "bernoulliNB__": np.linspace(0.1, 1.0, num=10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
@@ -153,7 +153,7 @@ def pregunta_04():
         cv=5,
         scoring="accuracy",
         refit=True,
-        return_train_score=True,
+        #return_train_score=True,
     )
 
     # Búsque la mejor combinación de regresores
