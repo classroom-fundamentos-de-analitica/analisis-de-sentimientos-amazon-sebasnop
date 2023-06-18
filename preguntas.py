@@ -123,8 +123,8 @@ def pregunta_04():
     countVectorizer = CountVectorizer(
         analyzer=analyzer,
         lowercase=True,
-        stop_words="english",
-        token_pattern=r"\b[a-zA-Z][a-zA-Z]+\b",
+        #stop_words="english",
+        #token_pattern=r"\b[a-zA-Z][a-zA-Z]+\b",
         binary=True,
         max_df=1.0,
         min_df=5,
